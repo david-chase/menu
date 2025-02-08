@@ -1,7 +1,7 @@
 Name,Path,Alias
-Octant K8s GUI,C:\ProgramData\chocolatey\bin\octant.exe,octant
-VS Code,C:\Program Files\Microsoft VS Code\bin\code.cmd,code
-kubectl, C:\ProgramData\chocolatey\bin\kubectl.exe, k
+Octant K8s GUI,%ChocolateyInstall%\bin\octant.exe,octant
+VS Code,%ProgramFiles%\Microsoft VS Code\bin\code.cmd,code
+kubectl, %ChocolateyInstall%\bin\kubectl.exe, k
 Add an EKS cluster to kubeconfig, %DevFolder%\k8s\scripts\Add-EKSCluster.ps1, Add-EKSCluster
 Clear all entries from kubeconfig, %DevFolder%\k8s\scripts\Clear-Kubeconfig.ps1, Clear-Kubeconfig
 Show MaxPodsPerNode for all nodes, %DevFolder%\k8s\scripts\Get-MaxPodsPerNode.ps1, Get-MaxPodsPerNode
@@ -9,9 +9,29 @@ Show a list of pods by node, %DevFolder%\k8s\scripts\Get-Pods-By-Node.ps1, Get-P
 Show the resource requests and limits for a pod, %DevFolder%\k8s\scripts\Get-Pod-Resources.ps1, Get-Pod-Resources
 EKS Node Viewer, %DevFolder%\k8s\scripts\Show-Nodes.ps1, Show-Nodes
 Show my kubeconfig, %DevFolder%\k8s\scripts\Get-Kubeconfig.ps1, Get-Kubeconfig
-AWS CLI, C:\Program Files\Amazon\AWSCLIV2\aws.exe, aws
-EksCtl, C:\ProgramData\chocolatey\bin\eksctl.exe, eksctl
+AWS CLI, %ProgramFiles%\Amazon\AWSCLIV2\aws.exe, aws
+EksCtl, %ChocolateyInstall%\bin\eksctl.exe, eksctl
 Lutho K8s GUI, %DevFolder%\k8s\tools\lutho.exe, lutho
-Links, %DevFolder%/links/Links.ps1, View and edit my bookmarks
+View and edit my bookmarks, %DevFolder%/links/Links.ps1, links
 Get a password, %DevFolder%/Get-Password/Get-Password.ps1, Get-Password
 Sync a git repo, %DevFolder%/git/Git-Sync.ps1, Git-Sync
+Cursor IDE, %LOCALAPPDATA%\Programs\cursor\resources\app\bin\cursor.cmd, cursor
+Refresh PowerShell environment, %ChocolateyInstall%\bin\RefreshEnv.cmd, RefreshEnv
+DemoMaker, %DocumentsFolder%\DemoMaker\DemoMakerC.exe, DemoMaker
+OCI CLI, %ProgramFiles(x86)%\Oracle\oci_cli\oci.exe, oci
+Terraform, %DevFolder%\tf\terraform.exe
+AVI Demuxer, %ProgramFiles%\Avidemux 2.8 VC++ 64bits\avidemux.exe, avidemux
+Disk Manager, %WINDIR%\system32\diskmgmt.msc, diskmgmt
+Gimp 2, %ProgramFiles%\GIMP 2\bin\gimp-2.10.exe, gimp
+Git, %ProgramFiles%\Git\bin\git.exe, git
+Hyper-V Manager, %WINDIR%\System32\virtmgmt.msc, hyper-v
+XnView, %ProgramFiles%\XnViewMP\XnViewmp.exe, xnv
+Everything, %DevFolder%\everything\Everything.ps1, everything
+Video Tagger, %DevFolder%\vt\vt.ps1, vt
+Get Model, %DevFolder%\Get-Model\Get-Model.ps1", Get-Model
+Get search/replace string, %DevFolder%\CollectionManagement\Get-SearchReplace.ps1
+Toss insta images, %DevFolder%\Insta-Subscriptions\Insta-Toss.ps1, Insta-Toss
+Insta subs, %DevFolder%\Insta-Subscriptions\Insta-Subs_v2.ps1, Insta-Subs
+Toss images, %DevFolder%\CollectionManagement\Toss-Images-v2.ps1, Toss-Images
+Tag images, %DevFolder%\CollectionManagement\Tag-Images-v2.ps1, Tag-Images
+
