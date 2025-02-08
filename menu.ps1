@@ -3,7 +3,7 @@
 # Function to validate and read the CSV file
 function Read-AppList {
     param (
-        [string]$csvPath = ".\apps.csv"
+        [string]$csvPath = "$PSScriptRoot\apps.csv"
     )
     
     if (-not (Test-Path $csvPath)) {
@@ -40,6 +40,7 @@ function Show-AppMenu {
 
 function Set-AppAliases {
     param (
+
         [Parameter(Mandatory=$true)]
         $apps
     )
@@ -49,7 +50,14 @@ function Set-AppAliases {
         if (-not [string]::IsNullOrEmpty($_.Path) -and 
             -not [string]::IsNullOrEmpty($_.Alias) -and 
             (Test-Path $expandedPath)) {
-            Set-Alias -Name $_.Alias -Value $expandedPath -Scope Global -Force
+            
+            $execPath = $expandedPath  # Capture the path in this scope
+            $scriptBlock = {
+                param([Parameter(ValueFromRemainingArguments=$true)]$args)
+                & $execPath $args
+            }.GetNewClosure()  # Capture the current value of $execPath
+            
+            Set-Item -Path "Function:Global:$($_.Alias)" -Value $scriptBlock
         }
     }
 }
