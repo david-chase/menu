@@ -23,6 +23,7 @@ function Read-AppList {
 
 # Function to display the menu of apps
 
+
 function Show-AppMenu {
     param (
         [Parameter(Mandatory=$true)]
@@ -33,13 +34,15 @@ function Show-AppMenu {
     
     $apps | Where-Object { Test-Path ([System.Environment]::ExpandEnvironmentVariables($_.Path)) } | 
         Sort-Object Alias | ForEach-Object {
-            Write-Host ("{0,-30} {1}" -f $_.Alias, $_.Name)
+            Write-Host ("{0,-30}" -f $_.Alias) -NoNewline -ForegroundColor Yellow
+            Write-Host " $($_.Name)"
     }
     Write-Host ""
 }
 
 function Set-AppAliases {
     param (
+
 
         [Parameter(Mandatory=$true)]
         $apps

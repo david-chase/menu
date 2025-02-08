@@ -1,17 +1,17 @@
 Name,Path,Alias
-Octant,C:\ProgramData\chocolatey\bin\octant.exe,octant
+Octant K8s GUI,C:\ProgramData\chocolatey\bin\octant.exe,octant
 VS Code,C:\Program Files\Microsoft VS Code\bin\code.cmd,code
 kubectl, C:\ProgramData\chocolatey\bin\kubectl.exe, k
-Add-EKSCluster, %DevFolder%\k8s\scripts\Add-EKSCluster.ps1, Add-EKSCluster
-Clear-Kubeconfig, %DevFolder%\k8s\scripts\Clear-Kubeconfig.ps1, Clear-Kubeconfig
-Get-MaxPodsPerNode, %DevFolder%\k8s\scripts\Get-MaxPodsPerNode.ps1, Get-MaxPodsPerNode
-Get-Pods-By-Node, %DevFolder%\k8s\scripts\Get-Pods-By-Node.ps1, Get-Pods-By-Node
-Get-Pod-Resources, %DevFolder%\k8s\scripts\Get-Pod-Resources.ps1, Get-Pod-Resources
-Show-Nodes, %DevFolder%\k8s\scripts\Show-Nodes.ps1, Show-Nodes
-Get-Kubeconfig, %DevFolder%\k8s\scripts\Get-Kubeconfig.ps1, Get-Kubeconfig
+Add an EKS cluster to kubeconfig, %DevFolder%\k8s\scripts\Add-EKSCluster.ps1, Add-EKSCluster
+Clear all entries from kubeconfig, %DevFolder%\k8s\scripts\Clear-Kubeconfig.ps1, Clear-Kubeconfig
+Show MaxPodsPerNode for all nodes, %DevFolder%\k8s\scripts\Get-MaxPodsPerNode.ps1, Get-MaxPodsPerNode
+Show a list of pods by node, %DevFolder%\k8s\scripts\Get-Pods-By-Node.ps1, Get-Pods-By-Node
+Show the resource requests and limits for a pod, %DevFolder%\k8s\scripts\Get-Pod-Resources.ps1, Get-Pod-Resources
+EKS Node Viewer, %DevFolder%\k8s\scripts\Show-Nodes.ps1, Show-Nodes
+Show my kubeconfig, %DevFolder%\k8s\scripts\Get-Kubeconfig.ps1, Get-Kubeconfig
 AWS CLI, C:\Program Files\Amazon\AWSCLIV2\aws.exe, aws
 EksCtl, C:\ProgramData\chocolatey\bin\eksctl.exe, eksctl
-Lutho GUI, %DevFolder%\k8s\tools\lutho.exe, lutho
-Links, %DevFolder%/links/Links.ps1, links
-Get-Password, %DevFolder%/Get-Password/Get-Password.ps1, Get-Password
-Git-Sync, %DevFolder%/git/Git-Sync.ps1, Git-Sync
+Lutho K8s GUI, %DevFolder%\k8s\tools\lutho.exe, lutho
+Links, %DevFolder%/links/Links.ps1, View and edit my bookmarks
+Get a password, %DevFolder%/Get-Password/Get-Password.ps1, Get-Password
+Sync a git repo, %DevFolder%/git/Git-Sync.ps1, Git-Sync
