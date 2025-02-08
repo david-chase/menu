@@ -1,0 +1,14 @@
+Name,Path,Alias
+Octant,C:\ProgramData\chocolatey\bin\octant.exe,octant
+VS Code,C:\Program Files\Microsoft VS Code\bin\code.cmd,code
+kubectl, C:\ProgramData\chocolatey\bin\kubectl.exe, k
+Add-EKSCluster, %DevFolder%\k8s\scripts\Add-EKSCluster.ps1, Add-EKSCluster
+Clear-Kubeconfig, %DevFolder%\k8s\scripts\Clear-Kubeconfig.ps1, Clear-Kubeconfig
+Get-MaxPodsPerNode, %DevFolder%\k8s\scripts\Get-MaxPodsPerNode.ps1, Get-MaxPodsPerNode
+Get-Pods-By-Node, %DevFolder%\k8s\scripts\Get-Pods-By-Node.ps1, Get-Pods-By-Node
+Get-Pod-Resources, %DevFolder%\k8s\scripts\Get-Pod-Resources.ps1, Get-Pod-Resources
+Show-Nodes, %DevFolder%\k8s\scripts\Show-Nodes.ps1, Show-Nodes
+Get-Kubeconfig, %DevFolder%\k8s\scripts\Get-Kubeconfig.ps1, Get-Kubeconfig
+AWS CLI, C:\Program Files\Amazon\AWSCLIV2\aws.exe, aws
+EksCtl, C:\ProgramData\chocolatey\bin\eksctl.exe, eksctl
+Lutho GUI, %DevFolder%\k8s\tools\lutho.exe, lutho
