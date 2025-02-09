@@ -28,10 +28,11 @@ Hyper-V Manager, %WINDIR%\System32\virtmgmt.msc, hyper-v
 XnView, %ProgramFiles%\XnViewMP\XnViewmp.exe, xnv
 Everything, %DevFolder%\everything\Everything.ps1, everything
 Video Tagger, %DevFolder%\vt\vt.ps1, vt
-Get Model, %DevFolder%\Get-Model\Get-Model.ps1", Get-Model
+Get Model, %DevFolder%\Get-Model\Get-Model.ps1, Get-Model
 Get search/replace string, %DevFolder%\CollectionManagement\Get-SearchReplace.ps1
 Toss insta images, %DevFolder%\Insta-Subscriptions\Insta-Toss.ps1, Insta-Toss
 Insta subs, %DevFolder%\Insta-Subscriptions\Insta-Subs_v2.ps1, Insta-Subs
 Toss images, %DevFolder%\CollectionManagement\Toss-Images-v2.ps1, Toss-Images
 Tag images, %DevFolder%\CollectionManagement\Tag-Images-v2.ps1, Tag-Images
-
+Steam, %ProgramFiles(x86)%\Steam\Steam.exe, steam
+Assets, %SharedFolder%\\Finances\Assets.xlsm, assets
