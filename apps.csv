@@ -1,7 +1,13 @@
 Name,Path,Alias
+<<<<<<< HEAD
 Octant K8s GUI,%ChocolateyInstall%\bin\octant.exe,octant
 VS Code,%ProgramFiles%\Microsoft VS Code\bin\code.cmd,code
 kubectl, %ChocolateyInstall%\bin\kubectl.exe, k
+=======
+Octant K8s GUI,%ProgramData%\chocolatey\bin\octant.exe,octant
+VS Code,%ProgramFiles%\Microsoft VS Code\bin\code.cmd,code
+kubectl, %ProgramData%\chocolatey\bin\kubectl.exe, k
+>>>>>>> 174c46f05e2e5cfceb00b7a91a4e4675e3d866f8
 Add an EKS cluster to kubeconfig, %DevFolder%\k8s\scripts\Add-EKSCluster.ps1, Add-EKSCluster
 Clear all entries from kubeconfig, %DevFolder%\k8s\scripts\Clear-Kubeconfig.ps1, Clear-Kubeconfig
 Show MaxPodsPerNode for all nodes, %DevFolder%\k8s\scripts\Get-MaxPodsPerNode.ps1, Get-MaxPodsPerNode
@@ -10,11 +16,16 @@ Show the resource requests and limits for a pod, %DevFolder%\k8s\scripts\Get-Pod
 EKS Node Viewer, %DevFolder%\k8s\scripts\Show-Nodes.ps1, Show-Nodes
 Show my kubeconfig, %DevFolder%\k8s\scripts\Get-Kubeconfig.ps1, Get-Kubeconfig
 AWS CLI, %ProgramFiles%\Amazon\AWSCLIV2\aws.exe, aws
+<<<<<<< HEAD
 EksCtl, %ChocolateyInstall%\bin\eksctl.exe, eksctl
+=======
+EksCtl, %ProgramData%\chocolatey\bin\eksctl.exe, eksctl
+>>>>>>> 174c46f05e2e5cfceb00b7a91a4e4675e3d866f8
 Lutho K8s GUI, %DevFolder%\k8s\tools\lutho.exe, lutho
 View and edit my bookmarks, %DevFolder%/links/Links.ps1, links
 Get a password, %DevFolder%/Get-Password/Get-Password.ps1, Get-Password
 Sync a git repo, %DevFolder%/git/Git-Sync.ps1, Git-Sync
+<<<<<<< HEAD
 Cursor IDE, %LOCALAPPDATA%\Programs\cursor\resources\app\bin\cursor.cmd, cursor
 Refresh PowerShell environment, %ChocolateyInstall%\bin\RefreshEnv.cmd, RefreshEnv
 DemoMaker, %DocumentsFolder%\DemoMaker\DemoMakerC.exe, DemoMaker
@@ -36,3 +47,13 @@ Toss images, %DevFolder%\CollectionManagement\Toss-Images-v2.ps1, Toss-Images
 Tag images, %DevFolder%\CollectionManagement\Tag-Images-v2.ps1, Tag-Images
 Steam, %ProgramFiles(x86)%\Steam\Steam.exe, steam
 Assets, %SharedFolder%\\Finances\Assets.xlsm, assets
+=======
+Tag images,%DevFolder%\CollectionManagement\Tag-Images-v2.ps1, tag-images
+Toss images, %DevFolder%\CollectionManagement\Toss-Images-v2.ps1, toss-images
+Download insta subs, %DevFolder%\Insta-Subscriptions\Insta-Subs_v2.ps1, Insta-Subs
+Toss Insta, %DevFolder%\Insta-Subscriptions\Insta-Toss.ps1, Insta-Toss
+Edit substitution strings, %DevFolder%\CollectionManagement\Get-SearchReplace.ps1, Get-SearchReplace
+Get model info, %DevFolder%\Get-Model\Get-Model.ps1, Get-Model
+Video tagger, %DevFolder%\vt\vt.ps1, vt
+OneNote, %ProgramFiles%\Microsoft Office\root\Office16\ONENOTE.EXE, onenote
+>>>>>>> 174c46f05e2e5cfceb00b7a91a4e4675e3d866f8
