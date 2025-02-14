@@ -12,6 +12,6 @@ Show my kubeconfig, %DevFolder%\k8s\scripts\Get-Kubeconfig.ps1, Get-Kubeconfig
 AWS CLI, C:\Program Files\Amazon\AWSCLIV2\aws.exe, aws
 EksCtl, C:\ProgramData\chocolatey\bin\eksctl.exe, eksctl
 Lutho K8s GUI, %DevFolder%\k8s\tools\lutho.exe, lutho
-Links, %DevFolder%/links/Links.ps1, View and edit my bookmarks
+View and edit my bookmarks, %DevFolder%/links/Links.ps1, links
 Get a password, %DevFolder%/Get-Password/Get-Password.ps1, Get-Password
 Sync a git repo, %DevFolder%/git/Git-Sync.ps1, Git-Sync
