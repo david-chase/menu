@@ -1,74 +1,37 @@
-# Menu program for PowerShell
+# Define the CSV file path relative to the script location
+$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$csvFile = Join-Path $scriptPath "apps.csv"
 
-# Function to validate and read the CSV file
-function Read-AppList {
-    param (
-        [string]$csvPath = "$PSScriptRoot\apps.csv"
-    )
+# Read the CSV file
+$apps = Import-Csv -Path $csvFile
+
+# Initialize an array for valid apps
+$validApps = @()
+
+# Process each app entry
+foreach ($app in $apps) {
+    # Expand environment variables in the command path
+    $expandedCommand = [System.Environment]::ExpandEnvironmentVariables($app.Command)
     
-    if (-not (Test-Path $csvPath)) {
-        Write-Error "CSV file not found at $csvPath"
-        return $null
-    }
-    
-    try {
-        $apps = Import-Csv $csvPath
-        return $apps
-    }
-    catch {
-        Write-Error "Error reading CSV file: $_"
-        return $null
-    }
-}
-
-# Function to display the menu of apps
-
-
-function Show-AppMenu {
-    param (
-        [Parameter(Mandatory=$true)]
-        $apps
-    )
-    
-    Write-Host "`n::: PowerShell Menu :::`n" -ForegroundColor Cyan
-    
-    $apps | Where-Object { Test-Path ([System.Environment]::ExpandEnvironmentVariables($_.Path)) } | 
-        Sort-Object Alias | ForEach-Object {
-            Write-Host ("{0,-30}" -f $_.Alias) -NoNewline -ForegroundColor Yellow
-            Write-Host " $($_.Name)"
-    }
-    Write-Host ""
-}
-
-function Set-AppAliases {
-    param (
-
-
-        [Parameter(Mandatory=$true)]
-        $apps
-    )
-    
-    $apps | ForEach-Object {
-        $expandedPath = [System.Environment]::ExpandEnvironmentVariables($_.Path)
-        if (-not [string]::IsNullOrEmpty($_.Path) -and 
-            -not [string]::IsNullOrEmpty($_.Alias) -and 
-            (Test-Path $expandedPath)) {
-            
-            $execPath = $expandedPath  # Capture the path in this scope
-            $scriptBlock = {
-                param([Parameter(ValueFromRemainingArguments=$true)]$args)
-                & $execPath $args
-            }.GetNewClosure()  # Capture the current value of $execPath
-            
-            Set-Item -Path "Function:Global:$($_.Alias)" -Value $scriptBlock
+    # Check if the application exists
+    if (Test-Path $expandedCommand -PathType Leaf) {
+        # Store valid app details
+        $validApps += [PSCustomObject]@{
+            ShortName    = $app.ShortName
+            Description  = $app.Description
+            Command      = $expandedCommand
         }
     }
 }
 
-# Main script execution
-$apps = Read-AppList
+# Sort the list by ShortName
+$validApps = $validApps | Sort-Object ShortName
 
-if ($apps) {
-    Show-AppMenu $apps
-    Set-AppAliases $apps
+# Display the app list with only ShortName and Description
+Write-Host "`n::: PowerShell Menu :::`n" -ForegroundColor Cyan
+$validApps | Select-Object ShortName, Description | Format-Table -AutoSize
+
+# Create aliases for valid applications
+foreach ($app in $validApps) {
+    Set-Alias -Name $app.ShortName -Value $app.Command -Scope Global -Force
 }

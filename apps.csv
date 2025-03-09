@@ -1,4 +1,4 @@
-Name,Path,Alias
+Description,Command,ShortName
 Octant K8s GUI,%ProgramData%\chocolatey\bin\octant.exe,octant
 VS Code,%ProgramFiles%\Microsoft VS Code\bin\code.cmd,code
 kubectl, %ProgramData%\chocolatey\bin\kubectl.exe, k
@@ -24,3 +24,6 @@ Get model info, %DevFolder%\Get-Model\Get-Model.ps1, Get-Model
 Video tagger, %DevFolder%\vt\vt.ps1, vt
 OneNote, %ProgramFiles%\Microsoft Office\root\Office16\ONENOTE.EXE, onenote
 XNView MP, %ProgramFiles%\XnViewMP\xnviewmp.exe, xnv
+My assets, F:\Shared\Finances\Assets.xlsm, assets
+Chocolatey package manager, %ProgramData%\chocolatey\bin\choco.exe, choco
+VeraCrypt, %ProgramFiles%\VeraCrypt\VeraCrypt.exe, veracrypt
