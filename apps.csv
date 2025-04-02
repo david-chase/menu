@@ -27,3 +27,6 @@ XNView MP, %ProgramFiles%\XnViewMP\xnviewmp.exe, xnv
 My assets, F:\Shared\Finances\Assets.xlsm, assets
 Chocolatey package manager, %ProgramData%\chocolatey\bin\choco.exe, choco
 VeraCrypt, %ProgramFiles%\VeraCrypt\VeraCrypt.exe, veracrypt
+GreenShot screen clipper, %ProgramFiles%\Greenshot\Greenshot.exe, greenshot
+ChatGPT, %ProgramFiles%\ChatGPT\ChatGPT.exe, chatgpt
+Obsidian, C:\Users\coupland\AppData\Local\Programs\Obsidian\Obsidian.exe, obsidian
