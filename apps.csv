@@ -31,5 +31,6 @@ GreenShot screen clipper, %ProgramFiles%\Greenshot\Greenshot.exe, greenshot
 ChatGPT, %ProgramFiles%\ChatGPT\ChatGPT.exe, chatgpt
 Obsidian, C:\Users\coupland\AppData\Local\Programs\Obsidian\Obsidian.exe, obsidian
 Obsidian, C:\Users\dchase\AppData\Local\Programs\Obsidian\Obsidian.exe, obsidian
+Obsidian, C:\Users\dchas\AppData\Local\Programs\Obsidian\Obsidian.exe, obsidian
 Sublime Text, "%ProgramFiles%\Sublime Text\sublime_text.exe", code
 OpenLens, "%ProgramFiles%\OpenLens\OpenLens.exe", lens
